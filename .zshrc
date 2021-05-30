@@ -102,7 +102,16 @@ source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-#
+
+#aliases
+alias q="exit" 
+alias canceljob="cancel HP-LaserJet-P2015-Series"
+alias sus="systemctl suspend"
+alias rczsh="vim ~/.zshrc"
+alias py9="source ~/py9/bin/activate"
+alias i3config="vim /home/hadi/.config/i3/config"
+alias scripts="cd ~/scripts"
+alias guc="cd ~/guc_courses"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
@@ -113,39 +122,20 @@ export GEM_HOME="$HOME/gems"
 export PATH="$HOME/gems/bin:$PATH"
 PATH=$PATH:~/scripts
 PATH=$PATH:~/i3-battery-popup
-function guc(){
-    cd ~/guc_courses
-}
 
 function mcd(){
      mkdir $1
      cd $1
 }
 
-function py9(){
-    source ~/py9/bin/activate
-}
-    
- function ppt-to-pdf (){
+function ppt-to-pdf (){
     libreoffice --headless --invisible --convert-to pdf *.ppt
     libreoffice --headless --invisible --convert-to pdf *.pptx
-} 
-
-function scripts(){
-    cd ~/scripts
 } 
 
 function labview(){
     cd /usr/local/natinst/LabVIEW-2020-64
     ./labviewprofull
-}
-
-function rczsh(){
-    vim ~/.zshrc
-}
-
-function sus(){
-    systemctl suspend
 }
 
 function grades(){
@@ -164,17 +154,6 @@ function cmsdownloader(){
    fi 
 }
 
-function canceljob(){
-    cancel HP-LaserJet-P2015-Series 
-}
-
-function i3config(){
-   vim /home/hadi/.config/i3/config 
-}
-
-function q(){
-   exit
-}
 function serve(){
    cd ~/HadiElnemr.github.io
    google-chrome http://localhost:4000//
